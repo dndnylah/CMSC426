@@ -4,9 +4,11 @@ import java.util.Scanner;
 public class CMSC401_A0{
     public static void main(String[] args){
         // import scanner
-        try (Scanner sc = new Scanner(System.in)) {
-            // read in the value associated with line numbers
-            String count = sc.nextLine();
+        Scanner sc = new Scanner(System.in);
+         // read in the value associated with line numbers
+        String count = sc.nextLine();
+        
+        try {
             // convert count value to an integer
             int c = Integer.valueOf(count);
             // an empty array to store the sums, with the length of c
@@ -34,6 +36,8 @@ public class CMSC401_A0{
             for (int i = 0; i < sums.length; i++){
                 System.out.println(sums[i]);
             }
-        }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter integers only.");
+        }    sc.close();
     }
 }
