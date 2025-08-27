@@ -7,6 +7,8 @@ public class CMSC401_A0{
         Scanner sc = new Scanner(System.in);
          // read in the value associated with line numbers
         String count = sc.nextLine();
+        // trim any leading or trailing spaces
+        count = count.trim();
         
         try {
             // convert count value to an integer
@@ -16,8 +18,8 @@ public class CMSC401_A0{
             // a for loop to read in each line
             for (int i = 0; i < c; i++){
                 String line = sc.nextLine();
-                // split the read in line by space
-                String[] numbers = line.split(" ");
+                // split the read in line by space(s)
+                String[] numbers = line.trim().split("\\s+");
                 // an empty array to store numercial forms of numbers string
                 int[] num = new int[numbers.length];
                 // convert the numbers array to integers
