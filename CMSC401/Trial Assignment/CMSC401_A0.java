@@ -8,7 +8,7 @@ public class CMSC401_A0{
             // read in the value associated with line numbers
             String count = sc.nextLine();
             // convert count value to an integer
-            int c = Integer.parseInt(count);
+            int c = Integer.valueOf(count);
             // an empty array to store the sums, with the length of c
             int[] sums = new int[c];
             // a for loop to read in each line
@@ -20,7 +20,7 @@ public class CMSC401_A0{
                 int[] num = new int[numbers.length];
                 // convert the numbers array to integers
                 for (int j = 0; j < numbers.length; j++){
-                    num[j] = Integer.parseInt(numbers[j]);
+                    num[j] = Integer.valueOf(numbers[j]);
                 }
                 // identify the x,y values for the array positions to be summed
                 int first = num[num.length - 2];
